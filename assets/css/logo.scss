@@ -1,3 +1,9 @@
+.header__logo a {
+  &:hover {
+    text-decoration: none;
+  };
+}
+
 .logo {
   display: flex;
   align-items: center;

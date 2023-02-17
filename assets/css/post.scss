@@ -54,6 +54,11 @@
 
     a {
       text-decoration: none;
+      color: unset;
+
+      &:hover {
+        color: $foam;
+      }
     }
   }
 
@@ -61,10 +66,16 @@
     display: block;
     margin-bottom: 20px;
     font-size: 1rem;
-    opacity: .5;
+    // opacity: .5;
+    color: $subtle;
 
     a {
       text-decoration: none;
+      color: unset;
+
+      &:hover {
+        color: $foam;
+      }
     }
   }
 

@@ -59,9 +59,7 @@ a.button {
   }
 }
 
-a.read-more,
-a.read-more:hover,
-a.read-more:active {
+a.read-more {
   display: inline-flex;
   border: none;
   color: $accent;
@@ -70,6 +68,12 @@ a.read-more:active {
   padding: 0;
   margin: 20px 0;
   max-width: 100%;
+}
+
+a.read-more:hover,
+a.read-more:active {
+  color: $foam;
+  background: none;
 }
 
 .code-toolbar {
@@ -92,4 +96,9 @@ a.read-more:active {
     cursor: pointer;
     outline: none;
   }
+}
+
+.button.next a,
+.button.previous a {
+  color: unset;
 }

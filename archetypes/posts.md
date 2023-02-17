@@ -1,14 +1,12 @@
 +++
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
 date = "{{ .Date }}"
-author = ""
-authorTwitter = "" #do not include @
+author = "ikws4"
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
-description = ""
-showFullContent = false
+tags = []
+keywords = []
 readingTime = false
-hideComments = false
-color = "" #color from the theme settings
+Toc = false
 +++
+
+<!--more-->

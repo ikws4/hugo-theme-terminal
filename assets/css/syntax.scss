@@ -1,68 +1,130 @@
-code.language-css,
-code.language-scss,
-.token.boolean,
-.token.string,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.language-scss .token.string,
-.style .token.string,
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.statement,
-.token.regex,
-.token.atrule,
-.token.number,
-.token.inserted,
-.token.important {
-  color: $accent !important;
+$base               : #232136;
+$surface            : #2a273f;
+$overlay            : #393552;
+$inactive           : #59546d;
+$muted              : #6e6a86;
+$subtle             : #817c9c;
+$text               : #e0def4;
+$love               : #eb6f92;
+$gold               : #f6c177;
+$rose               : #ea9a97;
+$pine               : #3e8fb0;
+$foam               : #9ccfd8;
+$iris               : #c4a7e7;
+$highlight          : #312f44;
+$highlight_inactive : #2a283d;
+$highlight_overlay  : #3f3c53;
+
+.token {
+  font-weight: 600;
 }
 
-.token.tag-id,
-.token.atrule-id,
+.token.keyword {
+  color: $pine;
+}
+
 .token.operator,
-.token.unit,
-.token.placeholder,
-.token.variable,
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted,
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-  color: transparentize($accent, .3) !important;
-}
-
-.token.property,
-.token.function,
-.token.function-name,
-.token.deleted,
-code.language-javascript,
-code.language-html,
-.command-line-prompt > span:before {
-  color: mix($accent, #999, .9) !important;
-}
-
-.token.selector,
-.token.tag,
-.token.punctuation {
-  color: white;
-}
-
 .token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: rgba(255, 255, 255, .3) !important;
+.token.punctuation {
+  color: $muted;
 }
 
-.token.namespace {
-  opacity: .7 !important;
+.token.boolean,
+.token.function {
+  color: $rose;
 }
+
+.token.class-name,
+.token.keyword.keyword-int,
+.token.keyword.keyword-boolean,
+.token.keyword.keyword-char,
+.token.keyword.keyword-byte,
+.token.keyword.keyword-long,
+.token.keyword.keyword-float,
+.token.keyword.keyword-double,
+.token.keyword.keyword-short {
+  color: $foam;
+}
+
+.token.number, 
+.token.string {
+  color: $gold;
+}
+
+.token.keyword.keyword-this {
+  color: $love;
+}
+
+.token.annotation.punctuation {
+  color: $iris;
+}
+
+
+// code.language-css,
+// code.language-scss,
+// .token.boolean,
+// .token.string,
+// .token.entity,
+// .token.url,
+// .language-css .token.string,
+// .language-scss .token.string,
+// .style .token.string,
+// .token.attr-value,
+// .token.keyword,
+// .token.control,
+// .token.directive,
+// .token.statement,
+// .token.regex,
+// .token.atrule,
+// .token.number,
+// .token.inserted,
+// .token.important {
+//   color: $accent !important;
+// }
+//
+// .token.tag-id,
+// .token.atrule-id,
+// .token.operator,
+// .token.unit,
+// .token.placeholder,
+// .token.variable,
+// .token.tag,
+// .token.attr-name,
+// .token.namespace,
+// .token.deleted,
+// .token.property,
+// .token.class-name,
+// .token.constant,
+// .token.symbol {
+//   color: transparentize($accent, .3) !important;
+// }
+//
+// .token.property,
+// .token.function,
+// .token.function-name,
+// .token.deleted,
+// code.language-javascript,
+// code.language-html,
+// .command-line-prompt > span:before {
+//   color: mix($accent, #999, .9) !important;
+// }
+//
+// .token.selector,
+// .token.tag,
+// .token.punctuation {
+//   color: white;
+// }
+//
+// .token.comment,
+// .token.prolog,
+// .token.doctype,
+// .token.cdata {
+//   color: rgba(255, 255, 255, .3) !important;
+// }
+//
+// .token.namespace {
+//   opacity: .7 !important;
+// }
 
 pre[data-line] {
   position: relative;
@@ -120,7 +182,9 @@ pre[class*="language-"] {
 	position: relative;
 	margin: $code-margin 0;
 	padding: 20px;
-	border: 1px solid rgba(255, 255, 255, .1);
+	// border: 1px solid rgba(255, 255, 255, .1);
+  border: 1.5px solid $border-color;
+  border-radius: 5px !important;
 
 	+ .code-toolbar,
 	+ .highlight,
@@ -141,12 +205,15 @@ pre[class*="language-"] {
   > .toolbar {
     button {
       font-size: .8em !important;
-      background: hsla(0,0%,87.8%,.2) !important;
-      color: #bbb !important;
-      box-shadow: 0 2px 0 0 rgba(0,0,0,.2) !important;
-      border-radius: 0 !important;
+      // background: hsla(0,0%,87.8%,.2) !important;
+      // color: #bbb !important;
+      background: $overlay !important;
+      color: $text !important;
+      
+      box-shadow: 0 0px 0 0 rgba(0,0,0,.2) !important;
+      border-radius: 2px !important;
       margin: 6px !important;
-      padding: 10px !important;
+      padding: 8px !important;
       user-select:none
     }
   }

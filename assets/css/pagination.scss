@@ -16,7 +16,8 @@
       margin: 0 auto;
       padding: 5px 10px;
       background: $background;
-      color: transparentize($color, .7);
+      // color: transparentize($color, .7);
+      color: $subtle;
       font-size: .8rem;
       text-transform: uppercase;
       text-decoration: none;

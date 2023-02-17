@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'JetBrains Mono', Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
@@ -63,6 +63,14 @@ a {
   /* &:has(code) {
     text-decoration-color: $accent;
   } */
+  text-decoration: none;
+  color: $foam;
+
+  &:hover {
+    color: $foam;
+    text-decoration: underline;
+    text-decoration-color: $foam;
+  }
 }
 
 img {
@@ -128,13 +136,14 @@ figure {
 }
 
 code, kbd {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
+  font-family: 'JetBrains Mono', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
   background: transparentize($accent, .8);
   color: $accent;
   padding: 1px 6px;
   margin: 0 2px;
   font-size: .95rem;
+  border-radius: 4px;
 
   code, kbd {
     background: transparent;
@@ -343,4 +352,12 @@ hr {
 
 sup {
  line-height: 0;
+}
+
+li a {
+  color: $text;
+
+  &:hover {
+    color: $foam;
+  }
 }
